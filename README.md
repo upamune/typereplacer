@@ -2,6 +2,8 @@
 
 > ✨ A Go struct field type rewriter
 
+<img src="https://i.gyazo.com/4adca03fb3614c56d93ad563cbced6bc.jpg" alt="logo" width="500">
+
 ## 🎯 What it does
 
 `typereplacer` is a CLI tool that helps you refactor Go struct field types across your entire codebase with ease. Simply define your type changes in a YAML config, and let the tool do the heavy lifting! 

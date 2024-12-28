@@ -17,8 +17,16 @@
 
 ### Installation
 
+Using `go`
+
 ```bash
 go install github.com/upamune/typereplacer@latest
+```
+
+Using `brew`
+
+```bash
+brew install upamune/tap/typereplacer
 ```
 
 ### Usage

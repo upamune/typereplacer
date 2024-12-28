@@ -1,0 +1,7 @@
+package sample5
+
+import "database/sql"
+
+type Info struct {
+	Text sql.Null[string]
+}

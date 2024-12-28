@@ -33,17 +33,17 @@ Create a YAML config file that specifies your desired type changes:
 # yaml-language-server: $schema=https://raw.githubusercontent.com/upamune/typereplacer/refs/tags/v0.2.0/schema.json
 # vim: set ts=2 sw=2 tw=0 fo=cnqoj
 imports:
-  - "fmt"
-  - "strings"
+  - "time"
+  - "github.com/shopspring/decimal"
 structs:
-  - name: "MyStruct"
+  - name: "User"
     fields:
-      - name: "Value"
-        type: "int"
-  - name: "YourStruct"
-    fields:
-      - name: "Text"
-        type: "string"
+      - name: "Balance"
+        type: "decimal.Decimal"
+      - name: "CreatedAt"
+        type: "time.Time"
+      - name: "UpdatedAt"
+        type: "time.Time"
 ```
 
 ### Config Structure

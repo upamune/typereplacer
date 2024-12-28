@@ -30,6 +30,8 @@ typereplacer --config=./myconfig.yaml ./path/to/pkg
 Create a YAML config file that specifies your desired type changes:
 
 ```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/upamune/typereplacer/refs/tags/v0.2.0/schema.json
+# vim: set ts=2 sw=2 tw=0 fo=cnqoj
 imports:
   - "fmt"
   - "strings"

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "typereplacer configuration",
+  "description": "Configuration schema for typereplacer - a Go struct field type rewriter",
+  "type": "object",
+  "required": ["structs"],
+  "properties": {
+    "imports": {
+      "type": "array",
+      "description": "List of packages to analyze (used for type resolution)",
+      "items": {
+        "type": "string",
+        "description": "Import path of a package"
+      },
+      "uniqueItems": true
+    },
+    "structs": {
+      "type": "array",
+      "description": "List of struct definitions to modify",
+      "items": {
+        "type": "object",
+        "required": ["name", "fields"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The struct name to target",
+            "pattern": "^[A-Za-z][A-Za-z0-9]*$"
+          },
+          "fields": {
+            "type": "array",
+            "description": "List of fields to update",
+            "items": {
+              "type": "object",
+              "required": ["name", "type"],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Field name to modify",
+                  "pattern": "^[A-Za-z][A-Za-z0-9]*$"
+                },
+                "type": {
+                  "type": "string",
+                  "description": "New type to apply"
+                }
+              },
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}
